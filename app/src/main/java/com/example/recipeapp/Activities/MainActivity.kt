@@ -6,16 +6,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recipeapp.API.APIClient
 import com.example.recipeapp.API.APIInterface
 import com.example.recipeapp.R
-import com.example.recipeapp.Recipe
-import com.example.recipeapp.RecipeItem
-import com.example.recipeapp.RecyclerViewAdapter
+import com.example.recipeapp.Model.Recipe
+
+import com.example.recipeapp.Adapter.RecyclerViewAdapter
+import com.example.recipeapp.Model.RecipeItem
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var addRecipeButton: Button
     private lateinit var recyclerViewAdapter: RecyclerViewAdapter
     private lateinit var recipeList: ArrayList<RecipeItem>
-     val apiClient = APIClient().getClient()?.create(APIInterface::class.java)
+    val apiClient = APIClient().getClient()?.create(APIInterface::class.java)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

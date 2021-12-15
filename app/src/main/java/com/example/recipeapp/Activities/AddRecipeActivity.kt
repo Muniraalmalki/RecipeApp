@@ -5,16 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.recipeapp.API.APIClient
 import com.example.recipeapp.API.APIInterface
+import com.example.recipeapp.Model.RecipeItem
 import com.example.recipeapp.R
-import com.example.recipeapp.Recipe
-import com.example.recipeapp.RecipeItem
-import com.example.recipeapp.RecyclerViewAdapter
+
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

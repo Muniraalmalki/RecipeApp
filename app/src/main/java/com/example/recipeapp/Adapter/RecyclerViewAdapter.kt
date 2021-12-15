@@ -1,4 +1,4 @@
-package com.example.recipeapp
+package com.example.recipeapp.Adapter
 
 import android.content.Context
 import android.content.Intent
@@ -6,10 +6,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.recipeapp.Activities.AddRecipeActivity
 import com.example.recipeapp.Activities.MainActivity2
+import com.example.recipeapp.Model.RecipeItem
 import com.example.recipeapp.databinding.RecipeItemRowBinding
 
 class RecyclerViewAdapter(val context: Context, private val recipeList: List<RecipeItem>):
@@ -40,17 +39,11 @@ class RecyclerViewAdapter(val context: Context, private val recipeList: List<Rec
                 intent = Intent(context, MainActivity2::class.java)
                 intent.putExtra("titleData",recipe.title)
                 intent.putExtra("authorData", recipe.author)
-                intent.putExtra("ingregdient", recipe.ingredients)
+                intent.putExtra("ingredients", recipe.ingredients)
                 intent.putExtra("instructions", recipe.instructions)
                 context.startActivity(intent)
 
-//                context.startActivity(Intent(context, MainActivity2::class.java)
-//
-//                    .putExtra("title",recipe.title+"\n"+recipe.author+"\n"+recipe.ingredients+"\n"+recipe.instructions)
-//
-//                )
             }
-
         }
     }
 

@@ -1,4 +1,4 @@
-package com.example.recipeapp
+package com.example.recipeapp.Model
 
 data class RecipeItem(
     val title: String,
